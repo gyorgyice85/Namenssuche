@@ -30,5 +30,5 @@ public class Launcher {
   * die Requests für den angegebenen Port akzeptiert.
   */
 
- // bind: Bindet (speichert) das sucheServerStub Objekt an den angegebenen Namen in diesem Registry.
+ // bind: Bindet (speichert) das sucheServerStub Objekt mit den angegebenen Namen in diesem Registry.
 

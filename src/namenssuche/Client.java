@@ -11,14 +11,14 @@ public class Client {
         try {
 
             //Damit erreichen wir das Server an der lokale Host
-            Registry registry = LocateRegistry.getRegistry("localhost");
+            Registry registry = LocateRegistry.getRegistry("10.9.44.143");
 
-            Suche suche = (Suche)registry.lookup("suche"); // suche bekommt als Wert ein Suche Objekt
+            Suche suche = (Suche)registry.lookup("suche"); // suche bekommt als Wert ein Suche-Objekt
 
             List<String> nachnameListe = new ArrayList<>();
-            nachnameListe.add("Farago");
+            nachnameListe.add("Puspakemala");
             nachnameListe.add("Rollian");
-            nachnameListe.add("Nina");
+            nachnameListe.add("Pham");
 
             for(String vorname :suche.getVornamen(nachnameListe)) {
               System.out.println(vorname);
@@ -40,7 +40,7 @@ public class Client {
   * Host im Default-Port 1099 zurück. Wenn Host null ist, wird der lokale Host verwendet.
   */
 
-  /* lookup sucht nach dem Remotereferenz mit den angegebenen Namen in dieser Registrierung
+  /* lookup sucht nach dem Remotereferenz mit den angegebenen Namen in Registry
    * und gibt die Remotereferenz zurück.(Return: Remote)
    * Remote ist ein Objekt, deren Methoden von remote erreichbar sind.
    */

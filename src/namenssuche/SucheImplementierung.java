@@ -19,10 +19,10 @@ public class SucheImplementierung  implements Suche{
         namenListe.add(new Name("Eridho Buffery","Rollian"));
         namenListe.add(new Name("Cong Long Peter","Pham"));
         namenListe.add(new Name("Gyögyi2","Palatinus"));
-        namenListe.add(new Name("Annisa Yustina2","Puspakemala"));
-        namenListe.add(new Name("Nexhmije2","Nina"));
-        namenListe.add(new Name("Eridho Buffery2","Rollian"));
-        namenListe.add(new Name("Cong Long Peter2","Pham"));
+        namenListe.add(new Name("Annisa Yustina","Puspakemala"));
+        namenListe.add(new Name("Nexhmije","Nina"));
+        namenListe.add(new Name("Eridho Buffery","Rollian"));
+        namenListe.add(new Name("Cong Long Peter","Pham"));
     }
 
 
@@ -46,6 +46,11 @@ public class SucheImplementierung  implements Suche{
                 ("Die anzahl der Nachnamen darf nicht groesser als 10 sein.");
         for(String name : nachnamenListe) {
             ergebnis.add(getVorname(name));
+        }
+        try {
+            Thread.sleep(3000); // Der Server gibt das Ergebnis 3 Min nach dem Client-Request zurück
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
         return ergebnis;
